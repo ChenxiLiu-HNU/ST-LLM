@@ -1,11 +1,12 @@
 ## Dependencies
 
-python==3.11
+* Python 3.11
+* PyTorch 2.1.2
+* cuda 12.1
+* torchvision 0.8.0
 
 ```bash
-pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cu118
-pip install transformers==4.36.2
-pip install pandas, scipy, einops
+> conda env create -f env_ubuntu.yaml
 ```
 
 ## Training
