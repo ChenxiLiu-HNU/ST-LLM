@@ -12,7 +12,7 @@
 ```
 
 ## Dataset
-
+We provide preprocessed datasets, which you can access [here](https://drive.google.com/drive/folders/1iif59LObrPu-QrpL8Y6lWeajbn_gRf7v?usp=drive_link). If you need the original datasets, please refer to the [ESG](https://github.com/LiuZH-19/ESG).
 
 ## Training
 
