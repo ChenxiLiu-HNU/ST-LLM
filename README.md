@@ -1,4 +1,5 @@
 # Spatial-Temporal Large Language Model for Traffic Prediction
+This repository contains the code of ST-LLM [paper](https://github.com/ChenxiLiu-HNU/ST-LLM/blob/main/ST-LLM.pdf)
 
 ## Dependencies
 
