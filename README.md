@@ -40,4 +40,4 @@ If you find our work useful in your research, please cite:
 }
 ```
 ## Acknowledgement
-Our implementation adapts [OFA](https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All) as the code base and has extensively modified it for our purposes. We thank the authors for sharing their implementations and related resources.
+Our implementation adapts [OFA](https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All) as the code base and has extensively modified it for our purposes. are grateful to the authors for providing their implementations and related resources.
