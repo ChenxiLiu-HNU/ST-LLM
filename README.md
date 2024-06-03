@@ -28,8 +28,8 @@ CUDA_VISIBLE_DEVICES=0
 nohup python train.py --data taxi_pick --device cuda:0  > your_log_name.log &
 ```
 
-## Citation
-If you find our work useful in your research, please cite:
+## BibTeX
+If you find our work useful in your research. Please consider giving a star ⭐ and citation 📚.
 
 ```bash
 @inproceedings{liu2024spatial,
