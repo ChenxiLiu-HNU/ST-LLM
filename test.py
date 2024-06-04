@@ -141,7 +141,7 @@ def main():
     _, _, adj_mx = util.load_adj(args.adjdata, args.adjtype)
     pre_adj = [torch.tensor(i).to(device) for i in adj_mx]
 
-    model = STAMT(
+    model = ST_LLM(
             device, args.input_dim, args.channels, args.num_nodes, args.input_len, args.output_len, args.dropout
         )
     model.to(device)
