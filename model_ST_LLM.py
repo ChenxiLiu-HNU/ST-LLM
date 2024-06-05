@@ -16,16 +16,16 @@ class TemporalEmbedding(nn.Module):
         nn.init.xavier_uniform_(self.time_week)
 
     def forward(self, x):
-        day_emb = x[..., 1]  # [64, 12, 170]
+        day_emb = x[..., 1]
         time_day = self.time_day[
             (day_emb[:, -1, :] * self.time).type(torch.LongTensor)
-        ]  # [64, 170, 64]
+        ]
         time_day = time_day.transpose(1, 2).unsqueeze(-1)
 
-        week_emb = x[..., 2]  # [64, 12, 170]
+        week_emb = x[..., 2]
         time_week = self.time_week[
             (week_emb[:, -1, :]).type(torch.LongTensor)
-        ]  # [64, 170, 64]
+        ]
         time_week = time_week.transpose(1, 2).unsqueeze(-1)
 
         # temporal embeddings
@@ -79,7 +79,6 @@ class ST_LLM(nn.Module):
         self.input_dim = input_dim
         self.output_len = output_len
 
-        # pems 288 nyc 48
         if num_nodes == 170 or num_nodes == 307:
             time = 288
         elif num_nodes == 250 or num_nodes == 266:
@@ -115,7 +114,7 @@ class ST_LLM(nn.Module):
 
     def forward(self, history_data):
         input_data = history_data
-        batch_size, _, num_nodes, _ = input_data.shape  # [64,3,170,12]
+        batch_size, _, num_nodes, _ = input_data.shape
         history_data = history_data.permute(0, 3, 2, 1)
 
         tem_emb = self.Temb(history_data)
@@ -143,7 +142,6 @@ class ST_LLM(nn.Module):
         data_st = self.gpt(data_st)
         data_st = data_st.permute(0, 2, 1).unsqueeze(-1)
 
-        # regression
-        prediction = self.regression_layer(data_st)  # [64, 12, 170, 1]
+        prediction = self.regression_layer(data_st)
 
         return prediction
