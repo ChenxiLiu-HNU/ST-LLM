@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from transformers.models.gpt2.modeling_gpt2 import GPT2Model
-
 from gcn.layers import GraphConvolution
 
 
