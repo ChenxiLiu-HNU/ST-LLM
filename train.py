@@ -7,8 +7,7 @@ import util
 import os
 from util import *
 import random
-# from model_ST_Att_LLM import ST_LLM
-from model_ST_LLAMA_Att import ST_LLM
+from model_ST_LLM import ST_LLM
 from ranger21 import Ranger
 import torch.optim as optim
 
@@ -71,14 +70,12 @@ class trainer:
         # exit()
 
     def train(self, input, real_val):
-        # input 64 1 170 12
-        # real_val 64 17 12
         self.model.train()
         self.optimizer.zero_grad()
-        output = self.model(input)  # 64 12 170 1
-        output = output.transpose(1, 3)  # 64 1 170 12
-        real = torch.unsqueeze(real_val, dim=1)  # 64 1 170 12
-        predict = self.scaler.inverse_transform(output)  # 64 1 170 12
+        output = self.model(input)
+        output = output.transpose(1, 3)
+        real = torch.unsqueeze(real_val, dim=1)
+        predict = self.scaler.inverse_transform(output)
         loss = self.loss(predict, real, 0.0)
         loss.backward()
         if self.clip is not None:
@@ -118,27 +115,7 @@ def main():
 
     data = args.data
 
-    if args.data == "PEMS08":
-        args.data = "data//" + args.data
-        args.num_nodes = 170
-
-
-    elif args.data == "PEMS03":
-        args.data = "data//" + args.data
-        args.num_nodes = 358
-        args.epochs = 300
-        args.es_patience = 100
-
-    elif args.data == "PEMS04":
-        args.data = "data//" + args.data
-        args.num_nodes = 307
-
-
-    elif args.data == "PEMS07":
-        args.data = "data//" + args.data
-        args.num_nodes = 883
-
-    elif args.data == "bike_drop":
+    if args.data == "bike_drop":
         args.data = "data//" + args.data
         args.num_nodes = 250
     
@@ -154,7 +131,6 @@ def main():
         args.data = "data//" + args.data
         args.num_nodes = 266
     
-
     device = torch.device(args.device)
 
     dataloader = util.load_dataset(
@@ -203,7 +179,7 @@ def main():
         t1 = time.time()
         # dataloader['train_loader'].shuffle()
         for iter, (x, y) in enumerate(dataloader["train_loader"].get_iterator()):
-            trainx = torch.Tensor(x).to(device)  # 64 12 170 1
+            trainx = torch.Tensor(x).to(device)
             trainx = trainx.transpose(1, 3)
             trainy = torch.Tensor(y).to(device)
             trainy = trainy.transpose(1, 3)
