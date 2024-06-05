@@ -7,7 +7,7 @@ import util
 import os
 from util import *
 import random
-from model_ST_GL_GPT import ST_LLM
+from model_GCN_GPT import ST_LLM
 from ranger21 import Ranger
 import torch.optim as optim
 from util import load_graph_data
