@@ -17,10 +17,10 @@ os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'max_split_size_mb:21'
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--device", type=str, default="cuda:0", help="")
-parser.add_argument("--data", type=str, default="PEMS-BAY", help="data path")
+parser.add_argument("--data", type=str, default="bike_drop", help="data path")
 parser.add_argument("--input_dim", type=int, default=3, help="input_dim")
 parser.add_argument("--channels", type=int, default=64, help="number of channels")
-parser.add_argument("--num_nodes", type=int, default=325, help="number of nodes")
+parser.add_argument("--num_nodes", type=int, default=250, help="number of nodes")
 parser.add_argument("--input_len", type=int, default=12, help="input_len")
 parser.add_argument("--output_len", type=int, default=12, help="out_len")
 parser.add_argument("--batch_size", type=int, default=64, help="batch size")
@@ -121,15 +121,7 @@ def main():
 
     data = args.data
 
-    if args.data == "PEMS-BAY":
-        args.data = "data//" + args.data
-        args.num_nodes = 325  
-
-    elif args.data == "METR-LA":
-        args.data = "data//" + args.data
-        args.num_nodes = 207   
-
-    elif args.data == "bike_drop":
+    if args.data == "bike_drop":
         args.data = "data//" + args.data
         args.num_nodes = 250
     
@@ -196,7 +188,7 @@ def main():
         t1 = time.time()
         # dataloader['train_loader'].shuffle()
         for iter, (x, y) in enumerate(dataloader["train_loader"].get_iterator()):
-            trainx = torch.Tensor(x).to(device)  # 64 12 170 1
+            trainx = torch.Tensor(x).to(device)
             trainx = trainx.transpose(1, 3)
             trainy = torch.Tensor(y).to(device)
             trainy = trainy.transpose(1, 3)
