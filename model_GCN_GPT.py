@@ -40,7 +40,6 @@ class GPT4TS(nn.Module):
                 param.requires_grad = False
 
     def forward(self, x):
-        # [64, 42, 768]
         return self.gpt2(inputs_embeds=x).last_hidden_state
 
 
@@ -81,10 +80,8 @@ class ST_LLM(nn.Module):
 
         self.gcn = GCN(gpt_channel, self.node_dim, gpt_channel, dropout=dropout)
 
-        # embedding layer
         self.gpt = GPT4TS(device=self.device, gpt_layers=6)
 
-        # regression
         self.regression_layer = nn.Conv2d(
             gpt_channel, self.output_len, kernel_size=(1, 1)
         )
@@ -95,11 +92,9 @@ class ST_LLM(nn.Module):
     def forward(self, history_data):
         input_data = history_data
         batch_size, _, num_nodes, _ = input_data.shape
-        # [64,3,170,12]
 
         history_data = history_data.permute(0, 3, 2, 1)
 
-        # print(input_data.shape)
         input_data = input_data.transpose(1, 2).contiguous()
         input_data = (
             input_data.view(batch_size, num_nodes, -1).transpose(1, 2).unsqueeze(-1)
@@ -115,7 +110,6 @@ class ST_LLM(nn.Module):
         data_st = self.gpt(data_st)
         data_st = data_st.permute(0, 2, 1).unsqueeze(-1)
 
-        # regression
         prediction = self.regression_layer(data_st)  # [64, 12, 170, 1]
 
         return prediction
