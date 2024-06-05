@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 from transformers.models.gpt2.modeling_gpt2 import GPT2Model
-
 from gat.layers import GraphAttentionLayer
 
 
@@ -55,7 +54,6 @@ class ST_LLM(nn.Module):
         elif num_nodes == 250 or num_nodes == 266:
             time = 48
 
-        # gpt_channel = 384
         gpt_channel = 768
 
         self.start_conv = nn.Conv2d(
@@ -93,20 +91,13 @@ class ST_LLM(nn.Module):
         )
         data_st = self.start_conv(input_data)
 
-        # reshape
-        # [B, HID, N, T] -> [B, N, T, HID]
         data_st = data_st.permute(0, 2, 3, 1)
-        # [B, N, T, HID] -> [B, N, T*HID]
         data_st = data_st.view(batch_size, num_nodes, -1)
-
-        # gat
+        
         data_st = self.gat(data_st, self.adj.unsqueeze(-1)) + data_st
-
-        # gpt
         data_st = self.gpt(data_st)
+        
         data_st = data_st.permute(0, 2, 1).unsqueeze(-1)
 
-        # regression
-        prediction = self.regression_layer(data_st)  # [64, 12, 170, 1]
-
+        prediction = self.regression_layer(data_st)
         return prediction
