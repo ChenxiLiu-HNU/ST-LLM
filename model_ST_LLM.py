@@ -33,9 +33,9 @@ class TemporalEmbedding(nn.Module):
         return tem_emb
 
 
-class LLM4TS(nn.Module):
+class PFA(nn.Module):
     def __init__(self, device="cuda:0", gpt_layers=6):
-        super(LLM4TS, self).__init__()
+        super(PFA, self).__init__()
         self.gpt2 = GPT2Model.from_pretrained(
             "gpt2", output_attentions=True, output_hidden_states=True
         )
@@ -97,7 +97,7 @@ class ST_LLM(nn.Module):
         )
 
         # embedding layer
-        self.gpt = LLM4TS(device=self.device, gpt_layers=6)
+        self.gpt = PFA(device=self.device, gpt_layers=6)
 
         self.feature_fusion = nn.Conv2d(
             gpt_channel * 3, to_gpt_channel, kernel_size=(1, 1)
