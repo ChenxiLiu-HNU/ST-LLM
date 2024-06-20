@@ -9,11 +9,10 @@ from util import *
 import random
 from model_GCN_GPT import ST_LLM
 from ranger21 import Ranger
-import torch.optim as optim
 from util import load_graph_data
+
 import os
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'max_split_size_mb:21'
-
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--device", type=str, default="cuda:0", help="")
