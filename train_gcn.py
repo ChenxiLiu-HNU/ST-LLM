@@ -45,7 +45,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-_, _, adj = load_graph_data("data/PEMS-BAY/adj_PEMS-BAY.pkl") #pems
+adj = load_graph_data("data/bike_drop/adj_mx.pkl") # nyc
 
 class trainer:
     def __init__(
