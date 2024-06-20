@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 from transformers.models.gpt2.modeling_gpt2 import GPT2Model
 
-
 class TemporalEmbedding(nn.Module):
     def __init__(self, time, features):
         super(TemporalEmbedding, self).__init__()
@@ -32,7 +31,6 @@ class TemporalEmbedding(nn.Module):
         tem_emb = time_day + time_week
         return tem_emb
 
-
 class PFA(nn.Module):
     def __init__(self, device="cuda:0", gpt_layers=6):
         super(PFA, self).__init__()
@@ -56,7 +54,6 @@ class PFA(nn.Module):
 
     def forward(self, x):
         return self.gpt2(inputs_embeds=x).last_hidden_state
-
 
 class ST_LLM(nn.Module):
     def __init__(
