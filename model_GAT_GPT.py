@@ -3,13 +3,12 @@ import torch.nn as nn
 from transformers.models.gpt2.modeling_gpt2 import GPT2Model
 from gat.layers import GraphAttentionLayer
 
-
 class GPT4TS(nn.Module):
     def __init__(self, device="cuda:0", gpt_layers=6):
         super(GPT4TS, self).__init__()
         self.gpt2 = GPT2Model.from_pretrained(
             "gpt2", output_attentions=True, output_hidden_states=True
-        )  # loads a pretrained GPT-2 base model
+        )
         self.gpt2.h = self.gpt2.h[:gpt_layers]
         print("gpt2 = {}".format(self.gpt2))
 
@@ -20,9 +19,7 @@ class GPT4TS(nn.Module):
                 param.requires_grad = False
 
     def forward(self, x):
-        # [64, 42, 768]
         return self.gpt2(inputs_embeds=x).last_hidden_state
-
 
 class ST_LLM(nn.Module):
     def __init__(
