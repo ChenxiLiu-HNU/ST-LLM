@@ -134,7 +134,7 @@ class ST_LLM(nn.Module):
 
         data_st = torch.cat(
             [input_data] + [tem_emb] + node_emb, dim=1
-        )  # [64, 192, 170, 1]
+        )
         data_st = self.feature_fusion(data_st)
         # data_st = F.leaky_relu(data_st)
 
