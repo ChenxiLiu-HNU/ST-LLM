@@ -4,7 +4,6 @@ import torch.nn.functional as F
 from transformers.models.gpt2.modeling_gpt2 import GPT2Model
 from gcn.layers import GraphConvolution
 
-
 class GCN(nn.Module):
     def __init__(self, nfeat, nhid, output, dropout):
         super(GCN, self).__init__()
@@ -21,7 +20,6 @@ class GCN(nn.Module):
         # print(x.shape)
         # print('a', F.log_softmax(x, dim=1).shape)
         return F.log_softmax(x, dim=1)
-
 
 class GPT4TS(nn.Module):
     def __init__(self, device="cuda:0", gpt_layers=6):
@@ -40,7 +38,6 @@ class GPT4TS(nn.Module):
 
     def forward(self, x):
         return self.gpt2(inputs_embeds=x).last_hidden_state
-
 
 class ST_LLM(nn.Module):
     def __init__(
@@ -102,8 +99,6 @@ class ST_LLM(nn.Module):
         input_data = self.start_conv(input_data)
 
         data_st = self.gcn(input_data, self.adj) + input_data
-
-        # data_st = torch.cat([input_data] + [tem_emb], dim=1)  # [64, 192, 170, 1]
 
         data_st = data_st.permute(0, 2, 1, 3).squeeze(-1)
         data_st = self.gpt(data_st)
