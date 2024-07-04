@@ -10,7 +10,7 @@ This repository contains the code of ST-LLM *"Spatial-Temporal Large Language Mo
 
 * Python 3.11
 * PyTorch 2.1.2
-* cuda 12.1
+* cuda 11.5
 * torchvision 0.8.0
 
 ```bash
