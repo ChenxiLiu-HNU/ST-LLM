@@ -1,4 +1,5 @@
 import torch
+import torch.optim as optim
 import numpy as np
 import pandas as pd
 import argparse
@@ -9,7 +10,6 @@ from util import *
 import random
 from model_ST_LLM import ST_LLM
 from ranger21 import Ranger
-import torch.optim as optim
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--device", type=str, default="cuda:0", help="")
@@ -41,7 +41,6 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-
 class trainer:
     def __init__(
         self,
@@ -54,7 +53,7 @@ class trainer:
         dropout,
         lrate,
         wdecay,
-        device,
+        device
     ):
         self.model = ST_LLM(
             device, input_dim, channels, num_nodes, input_len, output_len, dropout
@@ -98,7 +97,6 @@ class trainer:
         wmape = util.WMAPE_torch(predict, real, 0.0).item()
         return loss.item(), mape, rmse, wmape
 
-
 def seed_it(seed):
     random.seed(seed)
     os.environ["PYTHONSEED"] = str(seed)
@@ -109,10 +107,8 @@ def seed_it(seed):
     torch.backends.cudnn.enabled = True  
     torch.manual_seed(seed)
 
-
 def main():
     seed_it(6666)
-
     data = args.data
 
     if args.data == "bike_drop":
@@ -416,7 +412,6 @@ def main():
 
     test_csv = pd.DataFrame(test_result)
     test_csv.round(8).to_csv(f"{path}/test.csv")
-
 
 if __name__ == "__main__":
     t1 = time.time()
