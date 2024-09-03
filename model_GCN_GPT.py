@@ -86,19 +86,16 @@ class ST_LLM(nn.Module):
         return sum([param.nelement() for param in self.parameters()])
 
     def forward(self, history_data):
-        input_data = history_data
-        batch_size, _, num_nodes, _ = input_data.shape
+        batch_size, _, num_nodes, _ = history_data.shape
 
-        history_data = history_data.permute(0, 3, 2, 1)
-
-        input_data = input_data.transpose(1, 2).contiguous()
-        input_data = (
-            input_data.view(batch_size, num_nodes, -1).transpose(1, 2).unsqueeze(-1)
+        history_data = history_data.transpose(1, 2).contiguous()
+        history_data = (
+            history_data.view(batch_size, num_nodes, -1).transpose(1, 2).unsqueeze(-1)
         )
 
-        input_data = self.start_conv(input_data)
+        history_data = self.start_conv(history_data)
 
-        data_st = self.gcn(input_data, self.adj) + input_data
+        data_st = self.gcn(history_data, self.adj) + history_data
 
         data_st = data_st.permute(0, 2, 1, 3).squeeze(-1)
         data_st = self.gpt(data_st)
