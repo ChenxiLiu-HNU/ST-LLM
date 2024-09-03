@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from transformers.models.gpt2.modeling_gpt2 import GPT2Model
-from gat.layers import GraphAttentionLayer
+from gat import GraphAttentionLayer
 
 class GPT4TS(nn.Module):
     def __init__(self, device="cuda:0", gpt_layers=6):
