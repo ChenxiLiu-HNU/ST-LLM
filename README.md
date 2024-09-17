@@ -8,10 +8,10 @@ This repository contains the code of ST-LLM *"Spatial-Temporal Large Language Mo
 
 ## Dependencies
 
-* Python 3.11
-* PyTorch 2.1.2
-* cuda 11.5
-* torchvision 0.8.0
+* Python 3.8.19
+* PyTorch 2.4.1
+* cuda 11.7
+* torchvision 0.19.1
 
 ```bash
 > conda env create -f env_ubuntu.yaml
