@@ -1,4 +1,4 @@
-name: PyTorch
+name: ST-LLM
 channels:
   - dglteam
   - defaults
@@ -130,4 +130,3 @@ dependencies:
       - urllib3==1.26.13
       - werkzeug==3.0.1
       - yarl==1.9.4
-prefix: /home/username/anaconda3/envs/PyTorch
