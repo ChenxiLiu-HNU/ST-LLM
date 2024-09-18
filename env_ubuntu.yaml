@@ -1,4 +1,4 @@
-name: ST-LLM
+name: PyTorch
 channels:
   - dglteam
   - defaults
