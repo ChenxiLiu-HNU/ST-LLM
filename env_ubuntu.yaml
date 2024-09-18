@@ -1,17 +1,22 @@
-name: ST_LLM
+name: ST-LLM
 channels:
+  - dglteam
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
   - _openmp_mutex=5.1=1_gnu
   - blas=1.0=mkl
   - bottleneck=1.3.5=py310ha9d4c09_0
+  - brotli-python=1.0.9=py310h6a678d5_8
   - bzip2=1.0.8=h7b6447c_0
-  - ca-certificates=2023.08.22=h06a4308_0
+  - ca-certificates=2024.3.11=h06a4308_0
+  - dgl-cuda11.5=0.9.1post1=py310_0
   - intel-openmp=2023.1.0=hdb19cb5_46306
   - ld_impl_linux-64=2.38=h1181459_1
   - libffi=3.4.4=h6a678d5_0
   - libgcc-ng=11.2.0=h1234567_1
+  - libgfortran-ng=11.2.0=h00389a5_1
+  - libgfortran5=11.2.0=h1234567_1
   - libgomp=11.2.0=h1234567_1
   - libstdcxx-ng=11.2.0=h1234567_1
   - libuuid=1.41.5=h5eee18b_0
@@ -21,8 +26,12 @@ dependencies:
   - mkl_random=1.2.4=py310hdb19cb5_0
   - ncurses=6.4=h6a678d5_0
   - numexpr=2.8.7=py310h85018f9_0
-  - openssl=3.0.12=h7f8727e_0
+  - numpy-base=1.26.4=py310hb5e798b_0
+  - openssl=3.0.14=h5eee18b_0
   - pip=23.3.1=py310h06a4308_0
+  - platformdirs=3.10.0=py310h06a4308_0
+  - pooch=1.7.0=py310h06a4308_0
+  - pysocks=1.7.1=py310h06a4308_0
   - python=3.10.13=h955ad1f_0
   - python-dateutil=2.8.2=pyhd3eb1b0_0
   - python-tzdata=2023.3=pyhd3eb1b0_0
@@ -38,8 +47,10 @@ dependencies:
   - zlib=1.2.13=h5eee18b_0
   - pip:
       - absl-py==2.0.0
+      - accelerate==0.31.0
       - aiohttp==3.9.1
       - aiosignal==1.3.1
+      - annotated-types==0.7.0
       - async-timeout==4.0.3
       - attrs==23.2.0
       - cachetools==5.3.2
@@ -47,10 +58,12 @@ dependencies:
       - charset-normalizer==2.1.1
       - contourpy==1.2.0
       - cycler==0.12.1
+      - dgl==2.1.0
       - easy-torch==1.3.2
       - easydict==1.10
       - einops==0.7.0
       - filelock==3.9.0
+      - flash-attention==1.0.0
       - fonttools==4.47.0
       - frozenlist==1.4.1
       - fsspec==2023.12.2
@@ -74,11 +87,14 @@ dependencies:
       - oauthlib==3.2.2
       - packaging==23.1
       - pandas==1.3.5
+      - peft==0.11.1
       - pillow==9.3.0
       - protobuf==4.23.4
       - psutil==5.9.8
       - pyasn1==0.5.1
       - pyasn1-modules==0.3.0
+      - pydantic==2.8.2
+      - pydantic-core==2.20.1
       - pyparsing==3.1.1
       - pytorch-lightning==1.9.4
       - pyyaml==6.0.1
@@ -100,15 +116,18 @@ dependencies:
       - threadpoolctl==3.2.0
       - tokenizers==0.15.0
       - torch==2.1.2+cu121
+      - torch-geometric==2.5.3
       - torch-scatter==2.1.1+pt20cu117
       - torch-sparse==0.6.17+pt20cu117
       - torchaudio==2.1.2+cu121
+      - torchdata==0.7.1
       - torchmetrics==0.9.3
       - torchvision==0.16.2+cu121
       - tqdm==4.66.1
       - transformers==4.36.2
       - triton==2.1.0
-      - typing-extensions==4.4.0
+      - typing-extensions==4.12.2
       - urllib3==1.26.13
       - werkzeug==3.0.1
       - yarl==1.9.4
+prefix: /home/cxliu/anaconda3/envs/PyTorch
