@@ -77,6 +77,7 @@ class ST_LLM(nn.Module):
         self.input_len = input_len
         self.input_dim = input_dim
         self.output_len = output_len
+        self.llm_layer = llm_layer
         self.U = U
 
         if num_nodes == 170 or num_nodes == 307:
