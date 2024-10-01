@@ -65,7 +65,7 @@ class ST_LLM(nn.Module):
         num_nodes=170,
         input_len=12,
         output_len=12,
-        dropout=0.1,
+        llm_layer=6,
         U=1
     ):
         super().__init__()
@@ -97,7 +97,7 @@ class ST_LLM(nn.Module):
         )
 
         # embedding layer
-        self.gpt = PFA(device=self.device, gpt_layers=6, U=self.U)
+        self.gpt = PFA(device=self.device, gpt_layers=self.llm_layer, U=self.U)
 
         self.feature_fusion = nn.Conv2d(
             gpt_channel * 3, to_gpt_channel, kernel_size=(1, 1)
