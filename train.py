@@ -21,7 +21,7 @@ parser.add_argument("--output_len", type=int, default=12, help="out_len")
 parser.add_argument("--batch_size", type=int, default=64, help="batch size")
 parser.add_argument("--lrate", type=float, default=1e-3, help="learning rate")
 parser.add_argument("--llm_layer", type=int, default=1, help="llm layer")
-parser.add_argument("--U", type=int, default=2, help="unforzen layer")
+parser.add_argument("--U", type=int, default=2, help="unfrozen attention layer")
 parser.add_argument("--epochs", type=int, default=300, help="500")
 parser.add_argument("--print_every", type=int, default=50, help="")
 parser.add_argument(
