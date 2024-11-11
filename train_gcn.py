@@ -172,7 +172,6 @@ def main():
         args.weight_decay,
         device,
         adj
-
     )
 
     print("start training...", flush=True)
