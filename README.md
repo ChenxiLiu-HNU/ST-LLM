@@ -32,7 +32,7 @@ nohup python train.py --data taxi_pick > your_log_name.log &
 ## BibTex
 > If you find our work useful in your research. Please consider giving a star ⭐ and citation 📚:
 ```bibtex
-@inproceedings{stllm2024liu,
+@inproceedings{liu2024spatial,
   title={Spatial-temporal large language model for traffic prediction},
   author={Liu, Chenxi and Yang, Sun and Xu, Qianxiong and Li, Zhishuai and Long, Cheng and Li, Ziyue and Zhao, Rui},
   booktitle={MDM},
@@ -47,7 +47,7 @@ nohup python train.py --data taxi_pick > your_log_name.log &
 **Authors**: Chenxi Liu, Qianxiong Xu, Hao Miao, Sun Yang, Lingzheng Zhang, Cheng Long, Ziyue Li, Rui Zhao
 
 ```bibtex
-@inproceedings{timecma2025liu,
+@inproceedings{liu2024timecma,
   title={TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment},
   author={Liu, Chenxi and Xu, Qianxiong and Miao, Hao and Yang, Sun and Zhang, Lingzheng and Long, Cheng and Li, Ziyue and Zhao, Rui},
   booktitle={AAAI},
