@@ -48,7 +48,7 @@ nohup python train.py --data taxi_pick --device cuda:0  > your_log_name.log &
 
 ```bibtex
 @inproceedings{timecma2025liu,
-  title={TimeCMA: Towards LLM-Empowered Time Series Forecasting via Cross-Modality Alignment},
+  title={TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment},
   author={Liu, Chenxi and Xu, Qianxiong and Miao, Hao and Yang, Sun and Zhang, Lingzheng and Long, Cheng and Li, Ziyue and Zhao, Rui},
   booktitle={AAAI},
   year={2025}
