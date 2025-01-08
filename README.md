@@ -41,7 +41,7 @@ nohup python train.py --data taxi_pick --device cuda:0  > your_log_name.log &
 ```
 
 ## Further Reading
-[**TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment**]([https://arxiv.org/abs/2410.16032](https://arxiv.org/abs/2406.01638)), in *AAAI* 2025.
+[**TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment**](https://arxiv.org/abs/2406.01638), in *AAAI* 2025.
 <!--[\[GitHub Repo\]](https://github.com/kwuking/TimeMixer/blob/main/README.md)-->
 
 **Authors**: Chenxi Liu, Qianxiong Xu, Hao Miao, Sun Yang, Lingzheng Zhang, Cheng Long, Ziyue Li, Rui Zhao
