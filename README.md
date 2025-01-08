@@ -6,6 +6,16 @@ This repository contains the code of ST-LLM *"Spatial-Temporal Large Language Mo
 
 <img width="1098" alt="image" src="https://github.com/ChenxiLiu-HNU/ST-LLM/assets/46647878/15bf40a4-333f-42ed-a241-32432a5484ce">
 
+> If you find our work useful in your research. Please consider giving a star ⭐ and citation 📚:
+```bash
+@inproceedings{liu2024spatial,
+  title={Spatial-temporal large language model for traffic prediction},
+  author={Liu, Chenxi and Yang, Sun and Xu, Qianxiong and Li, Zhishuai and Long, Cheng and Li, Ziyue and Zhao, Rui},
+  booktitle={MDM},
+  year={2024}
+}
+```
+
 ## Dependencies
 
 * Python 3.8.19
@@ -28,16 +38,5 @@ CUDA_VISIBLE_DEVICES=0
 nohup python train.py --data taxi_pick --device cuda:0  > your_log_name.log &
 ```
 
-## BibTeX
-If you find our work useful in your research. Please consider giving a star ⭐ and citation 📚.
-
-```bash
-@inproceedings{liu2024spatial,
-  title={Spatial-temporal large language model for traffic prediction},
-  author={Liu, Chenxi and Yang, Sun and Xu, Qianxiong and Li, Zhishuai and Long, Cheng and Li, Ziyue and Zhao, Rui},
-  booktitle={MDM},
-  year={2024}
-}
-```
 ## Acknowledgement
 Our implementation adapts [OFA](https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All) as the code base and has extensively modified it for our purposes. We are grateful to the authors for providing their implementations and related resources.
