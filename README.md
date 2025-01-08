@@ -41,16 +41,16 @@ nohup python train.py --data taxi_pick --device cuda:0  > your_log_name.log &
 ```
 
 ## Further Reading
-1. [**TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment**]([https://arxiv.org/abs/2410.16032](https://arxiv.org/abs/2406.01638)), in *AAAI* 2025.
+[**TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment**]([https://arxiv.org/abs/2410.16032](https://arxiv.org/abs/2406.01638)), in *AAAI* 2025.
 <!--[\[GitHub Repo\]](https://github.com/kwuking/TimeMixer/blob/main/README.md)-->
 
 **Authors**: Chenxi Liu, Qianxiong Xu, Hao Miao, Sun Yang, Lingzheng Zhang, Cheng Long, Ziyue Li, Rui Zhao
 
 ```bibtex
-@inproceedings{timecma2024,
+@inproceedings{timecma2025liu,
   title={TimeCMA: Towards LLM-Empowered Time Series Forecasting via Cross-Modality Alignment},
   author={Liu, Chenxi and Xu, Qianxiong and Miao, Hao and Yang, Sun and Zhang, Lingzheng and Long, Cheng and Li, Ziyue and Zhao, Rui},
-  booktitle={Thirty-Nineth {AAAI} Conference on Artificial Intelligence, {AAAI} 2025, February 25 - March 4, 2025, Philadelphia, Pennsylvania, USA},
+  booktitle={AAAI},
   year={2025}
 }
 ```
