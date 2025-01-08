@@ -31,7 +31,7 @@ nohup python train.py --data taxi_pick --device cuda:0  > your_log_name.log &
 
 ## BibTex
 > If you find our work useful in your research. Please consider giving a star ⭐ and citation 📚:
-```bash
+```bibtex
 @inproceedings{liu2024spatial,
   title={Spatial-temporal large language model for traffic prediction},
   author={Liu, Chenxi and Yang, Sun and Xu, Qianxiong and Li, Zhishuai and Long, Cheng and Li, Ziyue and Zhao, Rui},
@@ -50,8 +50,7 @@ nohup python train.py --data taxi_pick --device cuda:0  > your_log_name.log &
 @inproceedings{timecma2024,
   title={TimeCMA: Towards LLM-Empowered Time Series Forecasting via Cross-Modality Alignment},
   author={Liu, Chenxi and Xu, Qianxiong and Miao, Hao and Yang, Sun and Zhang, Lingzheng and Long, Cheng and Li, Ziyue and Zhao, Rui},
-  booktitle={Thirty-Nineth {AAAI} Conference on Artificial Intelligence, {AAAI}
-                  2025, February 25 - March 4, 2025, Philadelphia, Pennsylvania, USA},
+  booktitle={Thirty-Nineth {AAAI} Conference on Artificial Intelligence, {AAAI} 2025, February 25 - March 4, 2025, Philadelphia, Pennsylvania, USA},
   year={2025}
 }
 ```
