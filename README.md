@@ -54,7 +54,7 @@ nohup python train.py --data taxi_pick > your_log_name.log &
 }
 ```
 
-[**Efficient Multivariate Time Series Forecasting via Calibrated Language Models with Privileged Knowledge Distillation**]([https://arxiv.org/abs/2406.01638](https://arxiv.org/abs/2505.02138)), in *ICDE* 2025.
+[**Efficient Multivariate Time Series Forecasting via Calibrated Language Models with Privileged Knowledge Distillation**](https://arxiv.org/abs/2505.02138), in *ICDE* 2025.
 [\[GitHub Repo\]](https://github.com/ChenxiLiu-HNU/TimeKD)
 
 **Authors**: Chenxi Liu, Hao Miao, Qianxiong Xu, Shaowen Zhou, Cheng Long, Yan Zhao, Ziyue Li, Rui Zhao
