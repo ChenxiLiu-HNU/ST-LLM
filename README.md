@@ -54,6 +54,20 @@ nohup python train.py --data taxi_pick > your_log_name.log &
 }
 ```
 
+[**Efficient Multivariate Time Series Forecasting via Calibrated Language Models with Privileged Knowledge Distillation**]([https://arxiv.org/abs/2406.01638](https://arxiv.org/abs/2505.02138)), in *ICDE* 2025.
+[\[GitHub Repo\]](https://github.com/ChenxiLiu-HNU/TimeKD)
+
+**Authors**: Chenxi Liu, Hao Miao, Qianxiong Xu, Shaowen Zhou, Cheng Long, Yan Zhao, Ziyue Li, Rui Zhao
+
+```bibtex
+@inproceedings{liu2025timekd,
+  title={Efficient Multivariate Time Series Forecasting via Calibrated Language Models with Privileged Knowledge Distillation},
+  author={Chenxi Liu and Hao Miao and Qianxiong Xu and Shaowen Zhou and Cheng Long and Yan Zhao and Ziyue Li and Rui Zhao},
+  booktitle    = {ICDE},
+  year={2025}
+}
+```
+
 ## Acknowledgement
 Our implementation adapts [OFA](https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All) as the code base and has extensively modified it for our purposes. We are grateful to the authors for providing their implementations and related resources.
 
