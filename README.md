@@ -40,6 +40,21 @@ nohup python train.py --data taxi_pick > your_log_name.log &
 ```
 
 ## Further Reading
+[**ST-LLM+: Graph Enhanced Spatio-Temporal Large Language Models for Traffic Predictio**]([https://arxiv.org/abs/2406.0163](https://www.computer.org/csdl/journal/tk/5555/01/11005661/26K27tC6ki4)8), in *TKDE* 2025.
+[\[GitHub Repo\]]([https://github.com/ChenxiLiu-HNU/TimeCMA](https://github.com/kethmih/ST-LLM-Plus))
+
+**Authors**: Chenxi Liu, Kethmi Hirushini Hettige, Qianxiong Xu, Cheng Long, Shili Xiang, Gao Cong, Ziyue Li, Rui Zhao
+
+```bibtex
+@inproceedings{liu2024timecma,
+  title={{TimeCMA}: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment},
+  author={Liu, Chenxi and Xu, Qianxiong and Miao, Hao and Yang, Sun and Zhang, Lingzheng and Long, Cheng and Li, Ziyue and Zhao, Rui},
+  booktitle={AAAI},
+  year={2025}
+}
+```
+
+
 [**TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment**](https://arxiv.org/abs/2406.01638), in *AAAI* 2025.
 [\[GitHub Repo\]](https://github.com/ChenxiLiu-HNU/TimeCMA)
 
