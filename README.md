@@ -46,7 +46,7 @@ nohup python train.py --data taxi_pick > your_log_name.log &
 **Authors**: Chenxi Liu, Kethmi Hirushini Hettige, Qianxiong Xu, Cheng Long, Shili Xiang, Gao Cong, Ziyue Li, Rui Zhao
 
 ```bibtex
-@article{liu2025_st_llm_plus,
+@article{liu2025stllm_plus,
   title={{ST-LLM+}: Graph Enhanced Spatial-Temporal Large Language Model for Traffic Prediction},
   author={Chenxi Liu and  Hettige Kethmi Hirushini and Qianxiong Xu and Cheng Long and Ziyue Li and Shili Xiang and Rui Zhao and Gao Cong},
   journal    = {{IEEE} Transactions Knowledge Data Engineering},
