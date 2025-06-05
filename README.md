@@ -83,6 +83,20 @@ nohup python train.py --data taxi_pick > your_log_name.log &
 }
 ```
 
+[**Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era**](https://arxiv.org/abs/2505.02583), in *IJCAI* 2025.
+[\[GitHub Repo\]](https://github.com/ChenxiLiu-HNU/CM2TS)
+
+**Authors**: Chenxi Liu, Shaowen Zhou, Qianxiong Xu, Hao Miao, Cheng Long, Ziyue Li, Rui Zhao
+
+```bibtex
+@inproceedings{liu2025cm2ts,
+  title={Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era},
+  author={Chenxi Liu, Shaowen Zhou, Qianxiong Xu, Hao Miao, Cheng Long, Ziyue Li, Rui Zhao},
+  booktitle    = {IJCAI},
+  year={2025}
+}
+```
+
 ## Acknowledgement
 Our implementation adapts [OFA](https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All) as the code base and has extensively modified it for our purposes. We are grateful to the authors for providing their implementations and related resources.
 
