@@ -46,14 +46,14 @@ nohup python train.py --data taxi_pick > your_log_name.log &
 **Authors**: Chenxi Liu, Kethmi Hirushini Hettige, Qianxiong Xu, Cheng Long, Shili Xiang, Gao Cong, Ziyue Li, Rui Zhao
 
 ```bibtex
-@inproceedings{liu2024timecma,
-  title={{TimeCMA}: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment},
-  author={Liu, Chenxi and Xu, Qianxiong and Miao, Hao and Yang, Sun and Zhang, Lingzheng and Long, Cheng and Li, Ziyue and Zhao, Rui},
-  booktitle={AAAI},
+@article{liu2025_st_llm_plus,
+  title={{ST-LLM+}: Graph Enhanced Spatial-Temporal Large Language Model for Traffic Prediction},
+  author={Chenxi Liu and  Hettige Kethmi Hirushini and Qianxiong Xu and Cheng Long and Ziyue Li and Shili Xiang and Rui Zhao and Gao Cong},
+  journal    = {{IEEE} Transactions Knowledge Data Engineering},
+  pages      = {1-14},
   year={2025}
 }
 ```
-
 
 [**TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment**](https://arxiv.org/abs/2406.01638), in *AAAI* 2025.
 [\[GitHub Repo\]](https://github.com/ChenxiLiu-HNU/TimeCMA)
