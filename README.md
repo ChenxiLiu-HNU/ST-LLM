@@ -91,8 +91,22 @@ nohup python train.py --data taxi_pick > your_log_name.log &
 ```bibtex
 @inproceedings{liu2025cm2ts,
   title={Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era},
-  author={Chenxi Liu, Shaowen Zhou, Qianxiong Xu, Hao Miao, Cheng Long, Ziyue Li, Rui Zhao},
+  author={Chenxi Liu and Shaowen Zhou and Qianxiong Xu and Hao Miao and Cheng Long and Ziyue Li and Rui Zhao},
   booktitle    = {IJCAI},
+  year={2025}
+}
+```
+
+[**LLMs Meet Cross-Modal Time Series Analytics: Overview and Directions**](https://dl.acm.org/doi/10.1145/3748777.3748810), in *SSTD* 2025.
+[\[Website\]](https://llm-cmts.github.io/)
+
+**Authors**: Chenxi Liu, Hao Miao, Cheng Long, Yan Zhao, Ziyue Li, Panos Kalnis
+
+```bibtex
+@inproceedings{sstd2025cmts,
+  title={LLMs Meet Cross-Modal Time Series Analytics: Overview and Directions},
+  author={Chenxi Liu and Hao Miao and Cheng Long and Yan Zhao and Ziyue Li and Panos Kalnis},
+  booktitle    = {SSTD},
   year={2025}
 }
 ```
